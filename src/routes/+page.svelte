@@ -1,6 +1,9 @@
 <script>
-    let data = "hello"
+    let data = ["Looping", "Over", "Data"];
+
 </script>
 
-<h1>Hello Wrld</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Welcome to the Home route</h1>
+{#each data as item}
+    <p>{item}</p>
+{/each}
