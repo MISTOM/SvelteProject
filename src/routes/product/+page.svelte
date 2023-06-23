@@ -4,6 +4,7 @@
 
   const title = data.title;
   const products = data.products;
+  const Component = data.Component;
 </script>
 
 <!--home link-->
@@ -14,12 +15,7 @@
 <ul>
   {#each products as product}
 
-    <li><a href={`/product/${product.id}`}>
-      <p>{ product.title }</p>
-      <p>{ product.description }</p>
-    </a></li>
-    <hr/>
-
+    <Component { product }/>
 
   {/each}
 </ul>
