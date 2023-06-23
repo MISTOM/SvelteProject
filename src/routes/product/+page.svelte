@@ -1,14 +1,25 @@
 
 <script>
-    let productId = 100
+  export let data;
+
+  const title = data.title;
+  const products = data.products;
 </script>
 
 <!--home link-->
 <h4><a href="/">Home</a></h4>
 <h1>Product Page</h1>
-<h3>Product List</h3>
+<h3>{ title }</h3>
+
 <ul>
-  <li><a href="/product/1">Product 1</a></li>
-  <li><a href="/product/2">Product 2</a></li>
-  <li><a href={`/product/${productId}`}>Product {productId}</a></li>
+  {#each products as product}
+
+    <li><a href={`/product/${product.id}`}>
+      <p>{ product.title }</p>
+      <p>{ product.description }</p>
+    </a></li>
+    <hr/>
+
+
+  {/each}
 </ul>
