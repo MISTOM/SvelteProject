@@ -33,4 +33,4 @@ export async function DELETE (requestEvent) {
     comments.splice(index, 1)
     
     return json(deletedComment, { status: 200 })
-}
+} 
