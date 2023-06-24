@@ -1,9 +1,29 @@
 <script>
-    import { page } from '$app/stores'
-    const productId = $page.params.productId
+    export let data
+    const title = data.title
+    const product = data.product
 </script>
 
-<h1>Details About product of the id:</h1>
-<pre>Product id: {productId}</pre>
-Check the review here:
-<a href="/product/{productId}/review/{productId+"review1"}">Review</a>
+<table>
+    <tr>
+        <td>{ title }</td>
+    </tr>
+    <tr>
+        <td>{ product.title }</td>
+    </tr>
+    <tr>
+        <td>{ product.description }</td>
+    </tr>
+    <tr>
+        <td>{ product.price }</td>
+    </tr>
+
+
+</table>
+
+<style>
+    table, td {
+        border: 1px solid black;
+    }
+
+</style>
