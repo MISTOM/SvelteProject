@@ -3,9 +3,11 @@
 </script>
 
 <header>
-    <h1>Header</h1>
-    <h5>Simple app</h5>
-    <span>{username}</span>
+    <div class="div1">
+        <h1>Header</h1>
+        <h5>Simple app</h5>
+        <span>{username}</span>
+    </div>
 </header>
 
 <style>
