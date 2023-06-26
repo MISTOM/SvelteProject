@@ -1,7 +1,7 @@
 import { error, redirect,  } from '@sveltejs/kit'
 //Server Load Function
 export const load =  async (loadServerEvent) => {
-    const { fetch, params } = loadServerEvent
+    const { fetch, params, depends } = loadServerEvent
     const { productId } = params
     if (productId > 10 ){
         //either throw error or redirect
@@ -14,6 +14,7 @@ export const load =  async (loadServerEvent) => {
         throw redirect(302, '/product')
 
     }
+    depends('product: detail')
     const title = "Product Details"
     const response = await fetch(`http://localhost:4000/products/${productId}`)
     const product = await response.json()
