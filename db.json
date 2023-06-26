@@ -62,6 +62,21 @@
             "description": "An external hard disk drive is a type of hard disk drive which is externally connected to a computer."
         }
     ],
+	"featured-products": [
+		{
+			"id": 1,
+			"title": "Notepad",
+            "price": 10.99,
+            "description": "Notepad is a simple text editor for Microsoft Windows and a basic text-editing program which enables computer users to create documents."
+
+		},
+		{
+			"id": 2,
+			"title": "Bicycle",
+            "price": 200.99,
+            "description": "The bicycle's invention has had an enormous effect on society, both in terms of culture and of advancing modern industrial methods."
+		}
+	],
     "postcodes": [
 		{
 			"postcode": "E3 4NA",
