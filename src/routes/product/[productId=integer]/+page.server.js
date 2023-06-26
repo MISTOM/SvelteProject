@@ -17,8 +17,9 @@ export const load =  async (loadServerEvent) => {
     const title = "Product Details"
     const response = await fetch(`http://localhost:4000/products/${productId}`)
     const product = await response.json()
+    const notification = "End of 50% off sale"
 
     return {
-        title, product
+        title, product, notification
     }
 }

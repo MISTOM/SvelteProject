@@ -11,6 +11,17 @@
     <title> { $page.data.title || 'Sveltekit Pilot'}</title>
 </svelte:head>
 
+{#if $page.data.notification}
+    <p> { $page.data.notification }</p>
+{/if}
+
+<style>
+    p {
+        margin: 0;
+        
+    }
+</style>
+
 <Header {username}/>
 <slot/>
 <Footer/>
